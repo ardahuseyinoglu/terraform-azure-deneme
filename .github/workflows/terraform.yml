@@ -26,10 +26,10 @@ jobs:
           ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
 
       - name: Terraform Init
-        run: terraform init
+        run: terraform init ./deployment/terraform
 
       - name: Terraform Plan
-        run: terraform plan
+        run: terraform plan ./deployment/terraform
 
       - name: Terraform Apply
-        run: terraform apply -auto-approve
+        run: terraform apply -auto-approve ./deployment/terraform
