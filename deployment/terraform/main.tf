@@ -5,7 +5,10 @@ provider "azurerm" {
 
 terraform {
   backend "azurerm" {
-    
+    resource_group_name = "rg-tfstate-deneme"
+    storage_account_name = "satfstatedeneme13827"
+    container_name = "sc-tfstate"
+    key = "terraform.tfstate"
   }
 }
 
