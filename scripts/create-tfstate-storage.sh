@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-set -euo pipefail
+
 IFS=$'\n\t'
 
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
