@@ -26,6 +26,3 @@ tf-destroy:
 
 tf-state-backup: tf-init
 	$(TF_RUN) state pull > ${ENV}-state.bkp
-
-create-storage:
-	shell ./scripts/create-tfstate-storage.sh

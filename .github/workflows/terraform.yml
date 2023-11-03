@@ -26,7 +26,10 @@ jobs:
           ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
 
       - name: Create Storage for Terraform State File
-        run: make create-storage
+        run: |
+          chmod +x ./scripts/create-tfstate-storage.sh
+          ./scripts/create-tfstate-storage.sh
+        shell: bash
 
       - name: Deploy Terraform
         run: make deploy
