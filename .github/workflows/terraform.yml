@@ -25,5 +25,8 @@ jobs:
           ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
           ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
 
+      - name: Create Storage for Terraform State File
+        run: make create-storage
+
       - name: Deploy Terraform
         run: make deploy
