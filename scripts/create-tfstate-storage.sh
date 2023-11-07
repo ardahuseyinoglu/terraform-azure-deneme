@@ -37,16 +37,3 @@ else
     echo "Storage container ${STORAGE_CONTAINER_NAME} in ${STORAGE_ACCOUNT_NAME} exists, skipping creation..."
 fi
 
-# Create service principal for access to the storage account
-STORAGE_ACCOUNT_ID=$(az storage account show -n ${STORAGE_ACCOUNT_NAME} | jq .id -r)
-echo "Storage account id is ${STORAGE_ACCOUNT_ID}"
-
-echo "Creating service principal for ${STORAGE_ACCOUNT_ID} resource with name ${SP_NAME} and role ${SP_ROLE}"
-SP_INFO=$(az ad sp create-for-rbac -n ${SP_NAME} --role ${SP_ROLE} --scopes ${STORAGE_ACCOUNT_ID})
-
-cat <<EOF > $parent_path/../.env
-export ARM_CLIENT_ID=$(echo $SP_INFO | jq .appId -r)
-export ARM_CLIENT_SECRET=$(echo $SP_INFO | jq .password -r)
-export ARM_TENANT_ID=$(echo $SP_INFO | jq .tenant -r)
-export ARM_SUBSCRIPTION_ID=$(az account show | jq .id -r)
-EOF
