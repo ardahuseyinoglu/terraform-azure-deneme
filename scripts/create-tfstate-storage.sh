@@ -39,6 +39,7 @@ fi
 
 # Create service principal for access to the storage account
 STORAGE_ACCOUNT_ID=$(az storage account show -n ${STORAGE_ACCOUNT_NAME} | jq .id -r)
+echo "Storage account id is ${STORAGE_ACCOUNT_ID}"
 
 echo "Creating service principal for ${STORAGE_ACCOUNT_ID} resource with name ${SP_NAME} and role ${SP_ROLE}"
 SP_INFO=$(az ad sp create-for-rbac -n ${SP_NAME} --role ${SP_ROLE} --scopes ${STORAGE_ACCOUNT_ID})
