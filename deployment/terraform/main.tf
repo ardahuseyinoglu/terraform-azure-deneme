@@ -1,6 +1,4 @@
 provider "azurerm" {
-  use_oidc = true
-  client_id = "d3b89b75-73b7-4a35-9823-bc327e2a9145"
   features {}
 }
 
@@ -11,9 +9,6 @@ terraform {
     storage_account_name = "satfstatedeneme13827"
     container_name = "sc-tfstate"
     key = "terraform.tfstate"
-    use_oidc = true
-    subscription_id = "5c5b3dfd-de8e-4027-a8b5-0c7dc3a59f99"
-    tenant_id = "44316954-dbc4-4cae-a989-4d42f2891453"
   }
 }
 
