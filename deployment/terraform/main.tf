@@ -6,7 +6,7 @@ provider "azurerm" {
 terraform {
   backend "azurerm" {
     resource_group_name = "test_azure_openai_resource_group1"
-    storage_account_name = "test_azure_openai_tfstate_storage8374bsvq32"
+    storage_account_name = "testazureopenaitfstate451685"
     container_name = "test_azure_openai_tfstate_container"
     key = "terraform.tfstate"
   }
