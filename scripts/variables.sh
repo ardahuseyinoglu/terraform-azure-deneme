@@ -1,4 +1,4 @@
 export REGION=westeurope
 export RG_NAME=test_azure_openai_resource_group1
-export STORAGE_ACCOUNT_NAME=testazureopenaitfstate451685
+export STORAGE_ACCOUNT_NAME=sar28hdtestazureopenaitfstate451685
 export STORAGE_CONTAINER_NAME=test_azure_openai_tfstate_container
