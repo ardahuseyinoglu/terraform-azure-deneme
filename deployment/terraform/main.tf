@@ -21,7 +21,7 @@ resource "azurerm_resource_group" "test_azure_openai_resource_group" {
 
 resource "azurerm_virtual_network" "test_azure_openai_vn_resource" {
   name                = "test_azure_openai_vn_resource1"
-  location            = azurerm_resource_group.testing_resource_group.location
-  resource_group_name = azurerm_resource_group.testing_resource_group.name
+  location            = azurerm_resource_group.test_azure_openai_resource_group.location
+  resource_group_name = azurerm_resource_group.test_azure_openai_resource_group.name
   address_space       = ["10.0.0.0/16"]
 }
