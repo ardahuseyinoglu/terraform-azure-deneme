@@ -1,4 +1,4 @@
 export REGION=westeurope
 export RG_NAME=test_azure_openai_resource_group1
 export STORAGE_ACCOUNT_NAME=deneme251xbhs25842
-export STORAGE_CONTAINER_NAME=test_azure_openai_tfstate_container
+export STORAGE_CONTAINER_NAME=sc-tfstate

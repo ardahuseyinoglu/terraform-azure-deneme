@@ -7,7 +7,7 @@ terraform {
   backend "azurerm" {
     resource_group_name = "test_azure_openai_resource_group1"
     storage_account_name = "deneme251xbhs25842"
-    container_name = "test_azure_openai_tfstate_container"
+    container_name = "sc-tfstate"
     key = "terraform.tfstate"
   }
 }
