@@ -1,1 +1,1 @@
-Creating Azure resources by using Terraform and GitHub Actions.
+Creating Azure resources by using Terraform and GitHub Actions..
