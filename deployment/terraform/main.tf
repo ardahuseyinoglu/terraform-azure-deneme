@@ -31,7 +31,7 @@ resource "azurerm_virtual_network" "test_azure_openai_vn_resource" {
 module "openai" {
   source  = "Azure/openai/azurerm"
   version = "0.1.1"
-  location = "East US"
-  resource_group_name = "test_azure_openai_resource_group1"
+  location = azurerm_resource_group.test_azure_openai_resource_group.location
+  resource_group_name = azurerm_resource_group.test_azure_openai_resource_group.name
   
 }
